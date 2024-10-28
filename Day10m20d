@@ -1,1 +1,37 @@
 
+제목: 처음 사용해보는 이분탐색
+
+- 오늘의 학습 키워드
+- 공부한 내용 본인의 언어로 정리하기
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x, y;
+	cin >> x >> y;
+
+	int max = x + (float)x / 10;
+	int percent = y / (float)x * 100;
+	int cnt = 0;
+	int answer = -1;
+	for (int s = x; s <= max; s++) {
+		int newPercent = y / (float)s * 100;
+		if (newPercent > percent) {
+			answer = cnt;
+			break;
+		}
+		cnt++;
+		y++;
+	}
+
+	cout << answer;
+}
+```
+- 오늘의 회고
+  - 어떤 문제가 있었고, 나는 어떤 시도를 했는지
+  - 어떻게 해결했는지
+  - 무엇을 새롭게 알았는지
+  - 내일 학습할 것은 무엇인지
+
+필수 해시태그: #99클럽 #코딩테스트준비 #개발자취업 #항해99 #TIL
